@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="FNF': Psych Engine 0.7.3" file="PsychMobile0.7.3" packageName="com.shadowmario.psychengine073" package="com.shadowmario.psychengine073" main="Main" version="1.1.0" company="ShadowMario" />
+	<app title="Mommy Engine" file="Mommy" packageName="com.syran.mommyengine" package="com.syran.mommyengine" main="Main" version="1.1.0" company="Syran" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -27,9 +27,9 @@
 	<define name="ACHIEVEMENTS_ALLOWED" />
 	<define name="DISCORD_ALLOWED" unless="mobile" />
 	<define name="PSYCH_WATERMARKS"/> <!-- DELETE THIS TO REMOVE WATERMARKS/DEV NAMES ON TITLE SCREEN -->
-
+	<define name="TITLE_SCREEN_EASTER_EGG"/>
+	
 	<section if="officialBuild">
-		<define name="TITLE_SCREEN_EASTER_EGG"/>
 	</section>
 
 	<!-- ____________________________ Window Settings ___________________________ -->
@@ -73,6 +73,7 @@
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
 	<assets path="assets/week_assets"   library="week_assets"   rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/week_assets"   library="week_assets"   rename="assets" exclude="*.mp3" unless="web"/>
+	
 	<section if="TITLE_SCREEN_EASTER_EGG">
 		<assets path="assets/secrets" rename="assets/shared" exclude="*.ogg" if="web"/>
 		<assets path="assets/secrets" rename="assets/shared" exclude="*.mp3"  unless="web"/>
